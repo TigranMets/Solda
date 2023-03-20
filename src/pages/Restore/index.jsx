@@ -3,7 +3,7 @@ import { Grid, Typography, Button, Link, useTheme } from '@mui/material';
 
 import OutlinedTextField from '../../components/OutlinedTextField';
 
-const Login = () => {
+const Restore = () => {
   const theme = useTheme();
 
   return (
@@ -21,22 +21,14 @@ const Login = () => {
         justifyContent={'space-between'}
         alignItems='baseline'
         marginBottom={'14px'}>
-        <Grid item xs={38}>
+        <Grid item xs={50} marginBottom={'21px'}>
           <Typography variant='h2' fullWidth textAlign={'center'}>
-            Войти в аккаунт
+            Восстановить доступ
           </Typography>
         </Grid>
-        <Grid item xs={38}>
-          <Button variant='outlined' fullWidth>
-            Регистрация
-          </Button>
-        </Grid>
       </Grid>
-      <Grid xs={12} container item marginBottom={'10px'}>
+      <Grid xs={12} container item marginBottom={'23px'}>
         <OutlinedTextField label='Введите электронную почту или логин' />
-      </Grid>
-      <Grid xs={12} container item marginBottom={'15px'}>
-        <OutlinedTextField label='Введите пароль' />
       </Grid>
       <Grid
         item
@@ -44,23 +36,12 @@ const Login = () => {
         container
         columns={100}
         direction='row'
-        justifyContent={'space-between'}
+        justifyContent={'flex-end'}
         alignItems='baseline'
         marginBottom={'14px'}>
         <Grid item xs={38}>
-          <Link
-            color={theme.palette.text.link}
-            variant={'h2'}
-            underline='always'
-            fullWidth
-            textAlign={'center'}
-            sx={{ display: 'block', cursor: 'pointer' }}>
-            Забыли пароль?
-          </Link>
-        </Grid>
-        <Grid item xs={38}>
           <Button variant='contained' fullWidth>
-            Войти
+            Восстановить
           </Button>
         </Grid>
       </Grid>
@@ -68,4 +49,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Restore;

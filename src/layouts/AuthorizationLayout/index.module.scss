@@ -1,0 +1,19 @@
+.logo{
+  margin-top: 51px;
+  @media(min-width: 768px){
+    display: none;
+  }
+
+
+}
+
+.wrapper{
+  width: 23.63vw;
+  min-width: 280px;
+  @media(max-width: 768px){
+    margin-top: -40px;
+  }
+  @media(min-width: 768px){
+    min-width: 360px;
+  }
+}

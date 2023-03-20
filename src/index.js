@@ -1,31 +1,18 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import './assets/fonts/stylesheet.css';
-import Login from './pages/Login';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/system';
 import { theme } from './theme/index.js';
+import App from './App.jsx';
 
-const router = createBrowserRouter([
-  {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/",
-    element: <div>Hello world!</div>,
-  },
-]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <CssBaseline />
     <ThemeProvider theme={theme}>
-      <RouterProvider router={router} />
+      <CssBaseline />
+      <BrowserRouter><App /></BrowserRouter>
     </ThemeProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
