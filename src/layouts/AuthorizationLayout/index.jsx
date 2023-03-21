@@ -10,7 +10,7 @@ import { Outlet } from 'react-router-dom';
 
 const AuthorizationLayout = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery('(max-width: 767px)');
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
   return (
     <Grid
