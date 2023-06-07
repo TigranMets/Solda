@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Solda/static/css/main.ac7ff870.css",
-    "main.js": "/Solda/static/js/main.e0ce1225.js",
+    "main.js": "/Solda/static/js/main.3ebf2577.js",
     "static/media/Calibri-LightItalic.woff": "/Solda/static/media/Calibri-LightItalic.d5c2f8b1848751d79d45.woff",
     "static/media/Tahoma.woff": "/Solda/static/media/Tahoma.513042bb89b5cd7f6fed.woff",
     "static/media/Tahoma-Bold.woff": "/Solda/static/media/Tahoma-Bold.32dc26c16ccf6fe7ecd5.woff",
@@ -65,10 +65,10 @@
     "static/media/quit.svg": "/Solda/static/media/quit.f4cc364218e06bc49e10cc299f719e51.svg",
     "index.html": "/Solda/index.html",
     "main.ac7ff870.css.map": "/Solda/static/css/main.ac7ff870.css.map",
-    "main.e0ce1225.js.map": "/Solda/static/js/main.e0ce1225.js.map"
+    "main.3ebf2577.js.map": "/Solda/static/js/main.3ebf2577.js.map"
   },
   "entrypoints": [
     "static/css/main.ac7ff870.css",
-    "static/js/main.e0ce1225.js"
+    "static/js/main.3ebf2577.js"
   ]
 }
