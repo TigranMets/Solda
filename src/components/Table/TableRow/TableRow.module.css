@@ -1,0 +1,37 @@
+.type {
+    display: block;
+    margin: 0 auto;
+}
+
+.name {
+    font-family: 'Calibri';
+    font-size: 13.3519px;
+    color: #0B74BA;
+}
+
+.location {
+    font-size: 10.6815px;
+    line-height: 13px;
+    color: #454544;
+}
+
+@media only screen and (max-width: 1024px) {
+    .department td {
+        font-size: 7.11111px;
+        line-height: 9px;
+    }
+
+    .type {
+        width: 16.18px;
+    }
+
+    .name {
+        font-size: 7.11111px;
+        line-height: 9px;
+    }
+
+    .location {
+        font-size: 5.68889px;
+        line-height: 7px;
+    }
+}

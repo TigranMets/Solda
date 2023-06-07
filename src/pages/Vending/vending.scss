@@ -1,0 +1,239 @@
+// addAutomatonBlock.scss
+
+.addAutomatonBlock {
+  margin-top: 62px;
+  width: 100%;
+  .input_label {
+    width: 280px;
+    margin-left: 51px;
+  }
+  label {
+    width: 148px;
+    height: 20px;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16.1675px;
+    line-height: 20px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+
+    color: rgba(0, 0, 0, 0.7);
+  }
+  input {
+    width: 348.76px;
+    height: 30.03px;
+
+    background: #ffffff;
+    box-shadow: 0px 0px 0px 1.15482px rgba(0, 0, 0, 0.5);
+  }
+  h2 {
+    width: 215px;
+    height: 25px;
+    margin-left: 51px;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20.7868px;
+    line-height: 25px;
+    letter-spacing: -0.02em;
+
+    color: #000000;
+  }
+
+  .formRow {
+    display: flex;
+    flex-direction: row;
+    margin-top: 57px;
+
+    .inputLabel {
+      margin-left: 51px;
+    }
+    p {
+      position: absolute;
+      width: 82px;
+      height: 20px;
+      left: 1257px;
+      top: 437px;
+
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16.1675px;
+      line-height: 20px;
+      /* identical to box height */
+
+      letter-spacing: -0.02em;
+
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+    input[type="text"],
+    select {
+      width: 148px;
+      height: 20px;
+
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16.1675px;
+      line-height: 20px;
+      /* identical to box height */
+
+      letter-spacing: -0.02em;
+
+      color: rgba(0, 0, 0, 0.7);
+    }
+    button {
+      cursor: pointer;
+      width: 117.4px;
+      height: 20.79px;
+      margin-left: 59px;
+      margin-top: 30px;
+
+      background: #efefef;
+      border: 1.15482px solid rgba(0, 0, 0, 0.5);
+      span {
+        width: 125px;
+        height: 14px;
+
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11.5482px;
+        line-height: 14px;
+        /* identical to box height */
+
+        letter-spacing: -0.02em;
+
+        color: rgba(0, 0, 0, 0.7);
+      }
+    }
+  }
+  .block_password {
+    display: flex;
+    padding-left: 20px;
+    box-sizing: border-box;
+
+    margin-left: 440px;
+    margin-top: -60px;
+
+    width: 787.59px;
+    height: 79.68px;
+
+    background: #ffffff;
+    mix-blend-mode: multiply;
+    border: 1.15482px solid rgba(0, 0, 0, 0.5);
+    input {
+      margin-left: 15px;
+    }
+    label {
+      margin-left: 15px;
+    }
+  }
+}
+.input__checkbox {
+  transform: scale(1.5);
+  opacity: 0.9;
+  cursor: pointer;
+  margin-left: 52px;
+  margin-top: 28px;
+  border: 1.15482px solid rgba(0, 0, 0, 0.7);
+}
+.payment_types {
+  width: 187px;
+  height: 20px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16.1675px;
+  line-height: 20px;
+
+  padding-left: 52px;
+
+  color: rgba(0, 0, 0, 0.7);
+}
+.payment {
+  display: flex;
+  justify-content: space-around;
+
+  box-sizing: border-box;
+
+  padding: 10px 0px 35px 0px;
+  margin-left: 51px;
+  width: 1295.57px;
+  height: 42.73px;
+
+  background: #ffffff;
+  mix-blend-mode: multiply;
+  border: 1.15482px solid #898989;
+
+  input {
+    box-sizing: border-box;
+
+    width: 19.63px;
+    height: 19.63px;
+
+    border: 1.15482px solid rgba(0, 0, 0, 0.7);
+  }
+  p {
+    margin-top: 0px;
+  }
+}
+.checkboxs {
+  margin-top: 28px;
+  input {
+    box-sizing: border-box;
+
+    width: 19.63px;
+    height: 19.63px;
+
+    border: 1.15482px solid rgba(0, 0, 0, 0.7);
+  }
+  label {
+    margin-left: 12px;
+  }
+}
+.form {
+  input {
+    width: 348.76px;
+    height: 30.03px;
+
+    background: #ffffff;
+    box-shadow: 0px 0px 0px 1.15482px rgba(0, 0, 0, 0.5);
+  }
+}
+.button_create {
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 64%;
+
+  width: 116px;
+  height: 28px;
+  cursor: pointer;
+
+  background: #06bbee;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  border: 0px;
+  color: #ffffff;
+}
+.formRow {
+  p {
+    margin-top: -70px;
+  }
+  button {
+    position: absolute;
+    top: 35%;
+    left: 62.4%;
+  }
+}

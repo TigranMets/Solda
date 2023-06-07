@@ -1,0 +1,302 @@
+.automates {
+  padding: 0px 23px 0px 37px;
+}
+
+.header_wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.header_wrapper div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_left {
+  max-width: 551px;
+  width: 100%;
+}
+
+.automates_title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.automates_and_vendings_title {
+  width: 178px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+
+.create_automate {
+  padding: 6.3px;
+  background: #009933;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  border: none;
+  color: #ffffff;
+}
+
+.add_icon {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.header_right {
+  width: 100%;
+  max-width: 1066px;
+}
+
+.automates_filter_select {
+  height: 30.03px;
+  box-shadow: 0px 0px 0px 1.15482px rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+}
+
+.performance {
+  width: 393.76px;
+}
+
+.location_select {
+  width: 205px;
+}
+
+.filtrs {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #010005;
+}
+
+.toggle_checkbox {
+  display: none;
+}
+
+.toggle_label {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #ccc;
+  position: relative;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.toggle_label::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+/* Styles when the toggle switch is checked */
+.toggle_checkbox:checked+.toggle_label {
+  background-color: #2196F3;
+}
+
+.toggle_checkbox:checked+.toggle_label::after {
+  transform: translateX(20px);
+}
+
+.searchWrapper {
+  position: relative;
+}
+
+.search {
+  width: 290px;
+  height: 26px;
+  background: #ffffff;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+}
+
+.create_automate_mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1670px) {
+  .header_right {
+    max-width: 650px;
+  }
+
+  .performance {
+    width: 200px;
+  }
+
+  .location_select {
+    width: 100px;
+  }
+
+  .search {
+    width: 190px;
+  }
+}
+
+@media only screen and (max-width: 1260px) {
+  .header_left {
+    max-width: 220px;
+  }
+
+  .automates_and_vendings_title {
+    width: 90px;
+    color: unset;
+    font-size: 7.36525px;
+    line-height: 9px;
+  }
+
+  .title_vending {
+    color: rgba(7, 7, 7, 0.5);
+  }
+
+  .automates_title {
+    display: none;
+  }
+
+  .create_automate {
+    font-size: 6.31307px;
+    line-height: 8px;
+    letter-spacing: -0.02em;
+  }
+
+  .header_right {
+    max-width: 500px;
+  }
+
+  .filters {
+    font-size: 6.31307px;
+    line-height: 8px;
+  }
+
+  .performance {
+    width: 150px;
+  }
+
+  .automates_filter_select {
+    font-weight: 500;
+    font-size: 6.31307px;
+    line-height: 8px;
+  }
+
+  .location_select {
+    width: 70px;
+  }
+
+  .search {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .automates {
+    padding: 0px;
+  }
+
+  .header_wrapper {
+    margin: 0px 35px;
+  }
+
+  .header_wrapper,
+  .header_right,
+  .header_left {
+    display: block !important;
+  }
+
+  .title_and_filtr_toggle {
+    margin-top: 8px;
+  }
+
+  .automates_and_vendings_title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .title_vending {
+    color: unset;
+  }
+
+  .create_automate {
+    display: none;
+  }
+
+  .automates_filter_select {
+    width: 47%;
+  }
+
+  .searchWrapper {
+    padding: 20px 0px;
+    background: #F3F5F6;
+  }
+
+  .search {
+    display: block;
+    width: 82.7%;
+    margin: 0 auto;
+  }
+
+  .searchIcon {
+    right: 50px;
+    top: 30px;
+  }
+
+  .toggle_label {
+    width: 24px;
+    height: 13px;
+    margin: 0px 5px;
+  }
+
+  .toggle_label::after {
+    width: 13px;
+    height: 13px;
+    top: 0;
+    left: 0;
+  }
+
+  .toggle_checkbox:checked+.toggle_label::after {
+    transform: translateX(11px);
+  }
+
+  .filtrs {
+    font-size: 11.4808px;
+    line-height: 14px;
+  }
+
+  .automates_filter_selects {
+    margin: 11.35px 0px 14.38px 0px;
+  }
+
+  .create_automate_mobile {
+    display: block;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 33.51px;
+    height: 33.51px;
+    background: #009846;
+    color: white;
+    border: none;
+    border-radius: 100%;
+    font-size: 30px;
+  }
+}

@@ -8,139 +8,164 @@ import {
   Typography,
   useMediaQuery,
   useTheme,
-} from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import React, { useState } from 'react';
-import style from './index.module.scss';
-import { Link } from 'react-router-dom';
-import LogoIcon from '../../assets/icons/logoMenu.svg';
-import ChatIcon from '../../assets/icons/chat.svg';
-import WarningIcon from '../../assets/icons/warning.svg';
-import InfoIcon from '../../assets/icons/info.svg';
-import UserIcon from '../../assets/icons/user.svg';
-import QuitIcon from '../../assets/icons/quit.svg';
-import NestedMenu from './NestedMenu';
-import { menu } from '../../helpers/data.js';
-import NestedNavList from './NestedNavList';
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import React, { useState } from "react";
+import style from "./index.module.scss";
+import { Link } from "react-router-dom";
+import LogoIcon from "../../assets/icons/logoMenu.svg";
+import ChatIcon from "../../assets/icons/chat.svg";
+import WarningIcon from "../../assets/icons/warning.svg";
+import InfoIcon from "../../assets/icons/info.svg";
+import UserIcon from "../../assets/icons/user.svg";
+import QuitIcon from "../../assets/icons/quit.svg";
+import NestedMenu from "./NestedMenu";
+import { menu } from "../../helpers/data.js";
+import NestedNavList from "./NestedNavList";
+import MainPage from "../../pages/MainPage/MainPage";
+import { Vending } from "../../pages/Vending/Vending";
+import Automata from "../../pages/Automata/Automata";
 
 const Header = () => {
   const theme = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
-  const isMobile = useMediaQuery('(max-width: 768px)');
-  const isBigMobile = useMediaQuery('(min-width: 420px)');
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isBigMobile = useMediaQuery("(min-width: 420px)");
 
   return (
-    <AppBar position='fixed' elevation={'false'}>
+    <AppBar position="fixed" elevation={"false"}>
       <Toolbar
         style={{
           backgroundColor: theme.palette.secondary.main,
-          padding: isMobile ? '0 13px 0' : '0 37px 0 24px',
-          minHeight: isMobile ? '50px' : '82px',
-        }}>
+          padding: isMobile ? "0 13px 0" : "0 37px 0 24px",
+          minHeight: isMobile ? "50px" : "82px",
+        }}
+      >
         <Grid
           container
-          flexDirection={'row'}
-          justifyContent='space-between'
-          alignItems={'center'}
-          flexWrap='nowrap'
+          flexDirection={"row"}
+          justifyContent="space-between"
+          alignItems={"center"}
+          flexWrap="nowrap"
           style={{
-            minHeight: isMobile ? '50px' : '82px',
-          }}>
+            minHeight: isMobile ? "50px" : "82px",
+          }}
+        >
           {isMobile && (
-            <Grid xs='auto' item alignItems={'center'}>
+            <Grid xs="auto" item alignItems={"center"}>
               <IconButton
                 onClick={() => setMenuOpen((prev) => !prev)}
                 color={theme.palette.primary.main}
-                sizeLarge>
+                sizeLarge
+              >
                 <MenuIcon
-                  sx={{ color: theme.palette.primary.main, width: '35px', height: '30px' }}
+                  sx={{
+                    color: theme.palette.primary.main,
+                    width: "35px",
+                    height: "30px",
+                  }}
                 />
               </IconButton>
             </Grid>
           )}
           {!isMobile && (
-            <Grid xs='auto' item alignItems={'center'}>
-              <Link style={{ height: 'fit-content' }}>
-                <img src={LogoIcon} width='212' height='45' />
+            <Grid xs="auto" item alignItems={"center"}>
+              <Link style={{ height: "fit-content" }}>
+                <img src={LogoIcon} width="212" height="45" />
               </Link>
             </Grid>
           )}
           {!isMobile && (
             <Grid
-              xs='auto'
+              xs="auto"
               container
               item
-              flexDirection='row'
+              flexDirection="row"
               style={{
-                minHeight: isMobile ? '50px' : '82px',
+                minHeight: isMobile ? "50px" : "82px",
               }}
-              alignItems={'center'}>
-              {menu.map(({ value, type, items }, index) => {
+              alignItems={"center"}
+            >
+              {menu.map(({ value, type, items, id }, index) => {
                 return (
                   <Grid
                     item
-                    sx='auto'
+                    sx="auto"
                     style={{
-                      minHeight: isMobile ? '50px' : '82px',
-                    }}>
-                    <NestedMenu title={value} type={type} items={items} index={index} />
+                      minHeight: isMobile ? "50px" : "82px",
+                    }}
+                  >
+                    <NestedMenu
+                      key={id}
+                      title={value}
+                      type={type}
+                      items={items}
+                      index={index}
+                    />
                   </Grid>
                 );
               })}
             </Grid>
           )}
           <Grid
-            xs='auto'
+            xs="auto"
             item
             container
-            height={isMobile ? '50px' : '82px'}
-            flexDirection={'row'}
-            justifyContent='space-between'
-            alignItems={'center'}
-            columnSpacing={isMobile ? 3 : 7}>
+            height={isMobile ? "50px" : "82px"}
+            flexDirection={"row"}
+            justifyContent="space-between"
+            alignItems={"center"}
+            columnSpacing={isMobile ? 3 : 7}
+          >
             <Grid
-              xs='auto'
+              xs="auto"
               container
-              justifyContent='space-between'
-              height={isMobile ? '50px' : '82px'}
+              justifyContent="space-between"
+              height={isMobile ? "50px" : "82px"}
               columnSpacing={isMobile ? 1.7 : 3}
               item
-              alignItems={'center'}>
-              <Grid xs='auto' item alignItems={'center'}>
-                <Link style={{ display: 'block', marginBottom: '-6px' }}>
+              alignItems={"center"}
+            >
+              <Grid xs="auto" item alignItems={"center"}>
+                <Link style={{ display: "block", marginBottom: "-6px" }}>
                   <img src={InfoIcon} />
                 </Link>
               </Grid>
-              <Grid xs='auto' item alignItems={'center'}>
-                <Link style={{ display: 'block', marginBottom: '-6px' }}>
+              <Grid xs="auto" item alignItems={"center"}>
+                <Link style={{ display: "block", marginBottom: "-6px" }}>
                   <img src={ChatIcon} />
                 </Link>
               </Grid>
-              <Grid xs='auto' item alignItems={'center'}>
-                <Link style={{ display: 'block', marginBottom: '-6px' }}>
+              <Grid xs="auto" item alignItems={"center"}>
+                <Link style={{ display: "block", marginBottom: "-6px" }}>
                   <img src={WarningIcon} />
                 </Link>
               </Grid>
             </Grid>
             <Grid
-              xs='auto'
+              xs="auto"
               item
               container
-              justifyContent='space-between'
-              alignItems={'center'}
-              columnSpacing={isMobile ? 2 : 4}>
-              <Grid item sx='auto'>
-                <Link style={{ display: 'block', textDecoration: 'none' }}>
-                  <Grid container alignItems={'center'} columnSpacing={1.2}>
-                    <Grid xs='auto' item alignItems={'center'}>
-                      <img src={UserIcon} style={{ display: 'block', marginBottom: '0px' }} />
+              justifyContent="space-between"
+              alignItems={"center"}
+              columnSpacing={isMobile ? 2 : 4}
+            >
+              <Grid item sx="auto">
+                <Link style={{ display: "block", textDecoration: "none" }}>
+                  <Grid container alignItems={"center"} columnSpacing={1.2}>
+                    <Grid xs="auto" item alignItems={"center"}>
+                      <img
+                        src={UserIcon}
+                        style={{ display: "block", marginBottom: "0px" }}
+                      />
                     </Grid>
                     {isBigMobile && (
-                      <Grid xs='auto' item alignItems={'center'}>
+                      <Grid xs="auto" item alignItems={"center"}>
                         <Typography
-                          variant='menuItem'
+                          variant="menuItem"
                           fontWeight={700}
-                          color={theme.palette.primary.main}>
+                          color={theme.palette.primary.main}
+                        >
                           Илья Петров
                         </Typography>
                       </Grid>
@@ -148,8 +173,8 @@ const Header = () => {
                   </Grid>
                 </Link>
               </Grid>
-              <Grid item sx='auto'>
-                <Link style={{ display: 'block', marginBottom: '-6px' }}>
+              <Grid item sx="auto">
+                <Link style={{ display: "block", marginBottom: "-6px" }}>
                   <img src={QuitIcon} />
                 </Link>
               </Grid>
@@ -158,6 +183,9 @@ const Header = () => {
         </Grid>
       </Toolbar>
       {menuOpen && <NestedNavList items={menu} />}
+      {/* <MainPage /> */}
+      {/* <Vending /> */}
+      <Automata />
     </AppBar>
   );
 };
